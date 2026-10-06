@@ -182,7 +182,7 @@
       ],
       "private": false,
       "featured": true,
-      "links": [{ "label": "GitHub", "url": "https://github.com/BBT0423/readmanga" }]
+      "links": [{ "label": "GitHub — Web", "url": "https://github.com/BBT0423/readmanga" }, { "label": "GitHub — Android", "url": "https://github.com/BBT0423/readmanga-mobile" }]
     }
   ],
   "learning": ["Godot 4 (GDScript)"],
