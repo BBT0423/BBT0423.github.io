@@ -164,28 +164,33 @@
   <!-- 06 Contact -->
   <section id="contact" class="container section last">
     <div class="contact-card" appReveal>
-      <div>
+      <div class="contact-head">
         <div class="eyebrow mono">06 — {{ 'nav.contact' | t }}</div>
         <h2>{{ 'contact.title' | t }}</h2>
         <p class="muted contact-sub">{{ 'contact.sub' | t }}</p>
-        <dl class="contact-list">
-          <dt class="mono">Email</dt>
-          <dd>
-            @for (em of c.profile.emails ?? [c.profile.email]; track em) {
-              <a [href]="'mailto:' + em">{{ em }}</a>
-            }
-          </dd>
-          @if (c.profile.phone) {
-            <dt class="mono">{{ 'contact.phone' | t }}</dt>
-            <dd><a [href]="tel(c.profile.phone)">{{ c.profile.phone }}</a></dd>
-          }
-          <dt class="mono">GitHub</dt>
-          <dd><a [href]="'https://' + c.profile.github" target="_blank" rel="noopener">{{ c.profile.github }}</a></dd>
-          <dt class="mono">{{ 'contact.location' | t }}</dt>
-          <dd>{{ c.profile.location }}</dd>
-        </dl>
       </div>
-      <app-contact-form [to]="c.profile.email" />
+      <div class="contact-tiles">
+        <div class="contact-tile">
+          <span class="tile-label mono">Email</span>
+          @for (em of c.profile.emails ?? [c.profile.email]; track em) {
+            <a class="tile-value" [href]="'mailto:' + em">{{ em }}</a>
+          }
+        </div>
+        @if (c.profile.phone) {
+          <a class="contact-tile" [href]="tel(c.profile.phone)">
+            <span class="tile-label mono">{{ 'contact.phone' | t }}</span>
+            <span class="tile-value">{{ c.profile.phone }}</span>
+          </a>
+        }
+        <a class="contact-tile" [href]="'https://' + c.profile.github" target="_blank" rel="noopener">
+          <span class="tile-label mono">GitHub</span>
+          <span class="tile-value">{{ c.profile.github }} ↗</span>
+        </a>
+        <div class="contact-tile">
+          <span class="tile-label mono">{{ 'contact.location' | t }}</span>
+          <span class="tile-value plain">{{ c.profile.location }}</span>
+        </div>
+      </div>
     </div>
   </section>
 } @else {

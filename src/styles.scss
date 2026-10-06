@@ -1030,9 +1030,6 @@ app-project-card {
 
 /* ===== Contact ===== */
 .contact-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
-  gap: 40px;
   padding: clamp(26px, 5vw, 48px);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -1043,89 +1040,62 @@ app-project-card {
   margin-top: 12px;
   font-size: 16px;
   line-height: 1.65;
-  max-width: 420px;
+  max-width: 520px;
 }
 
-.contact-list {
-  margin: 28px 0 0;
+.contact-tiles {
+  margin-top: 32px;
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 14px 12px;
-  align-items: baseline;
+  grid-template-columns: 1.6fr 1fr 1.2fr 1fr;
+  gap: 14px;
 }
 
-.contact-list dt {
+@media (max-width: 900px) {
+  .contact-tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--ink);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+a.contact-tile:hover,
+.contact-tile:has(a:hover) {
+  color: var(--ink);
+  transform: translateY(-3px);
+  border-color: var(--brand);
+  box-shadow: var(--shadow);
+}
+
+.tile-label {
   font-size: 12px;
   color: var(--ink2);
 }
 
-.contact-list dd {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.tile-value {
   font-size: 15px;
   font-weight: 700;
-  word-break: break-all;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--bg);
-  color: var(--ink);
-  font: 500 15px var(--font);
-  line-height: 1.5;
-  outline: none;
-  resize: vertical;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--brand);
-  box-shadow: 0 0 0 3px var(--brand-soft);
-}
-
-.field .invalid {
-  border-color: var(--accent-ink);
-}
-
-.form-error {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--accent-ink);
-}
-
-.form-sent {
-  padding: 12px 14px;
-  border-radius: 10px;
-  background: var(--brand-soft);
-  font-size: 14px;
-  font-weight: 600;
   color: var(--brand-ink);
+  overflow-wrap: anywhere;
 }
 
-.contact-form .btn {
-  align-self: flex-start;
-  padding: 13px 24px;
+.tile-value.plain {
+  color: var(--ink);
 }
 
 /* ===== Project detail ===== */
@@ -1337,9 +1307,6 @@ app-project-card {
     gap: 8px;
   }
 
-  .contact-list {
-    grid-template-columns: 64px 1fr;
-  }
 }
 
 /* ===== Reduced motion ===== */

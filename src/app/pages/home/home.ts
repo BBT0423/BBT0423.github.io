@@ -8,7 +8,6 @@ import { Timeline } from '../../components/timeline';
 import { BarChart } from '../../components/bar-chart';
 import { SkillGroup } from '../../components/skill-group';
 import { ProjectCard } from '../../components/project-card';
-import { ContactForm } from '../../components/contact-form';
 import { HeroBg } from '../../components/hero-bg';
 import { Typer } from '../../components/typer';
 
@@ -23,7 +22,6 @@ import { Typer } from '../../components/typer';
     BarChart,
     SkillGroup,
     ProjectCard,
-    ContactForm,
     HeroBg,
     Typer,
   ],
