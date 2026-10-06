@@ -31,7 +31,12 @@
         </div>
       </div>
       @if (c.profile.photo) {
-        <img class="hero-photo" [src]="c.profile.photo" [alt]="c.profile.name" />
+        <div class="hero-photo">
+          <div class="hero-photo-back" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img [src]="c.profile.photo" [alt]="c.profile.name" width="1108" height="1477" />
+          </div>
+        </div>
       }
     </div>
   </section>
