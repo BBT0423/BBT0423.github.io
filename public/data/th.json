@@ -147,11 +147,11 @@
         "โปรเจกต์ที่ได้มี JWT login, 2FA และรีเซ็ตรหัสผ่านมาให้พร้อมใช้",
         "คำสั่ง `generate feature` เพิ่ม feature แบบ CQRS เข้าไปในโปรเจกต์ที่มีอยู่แล้ว",
         "มี unit test และ end-to-end test ด้วย Vitest",
-        "ใช้กันภายในทีม ยังไม่เปิดโค้ดสาธารณะ"
+        "ทำให้ทีมใช้งานจริง และเปิดโค้ดให้ดูบน GitHub"
       ],
       "private": false,
       "featured": true,
-      "links": []
+      "links": [{ "label": "GitHub", "url": "https://github.com/BBT0423/create-clean-arch" }]
     },
     {
       "slug": "family-expense-tracker",

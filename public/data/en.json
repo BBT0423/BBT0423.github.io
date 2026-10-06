@@ -420,11 +420,11 @@
         "Generated projects come with JWT login, 2FA and password reset.",
         "`generate feature` adds a new CQRS feature slice to an existing project.",
         "Covered by Vitest unit and end-to-end tests.",
-        "Used internally by a team; source not public."
+        "Built for and used by my team; the source is open on GitHub."
       ],
       "private": false,
       "featured": true,
-      "links": []
+      "links": [{ "label": "GitHub", "url": "https://github.com/BBT0423/create-clean-arch" }]
     },
     {
       "slug": "family-expense-tracker",
