@@ -443,7 +443,7 @@
         "Budgets, transaction approvals, notifications, PDF / Excel reports, and Excel import as a background job with progress tracking.",
         "Clean Architecture + CQRS (MediatR), JWT + Google login, 2FA (TOTP) and audit log.",
         "44 test files (xUnit, Moq, integration tests); Bitbucket CI → SonarCloud → Azure.",
-        "Also ships as an offline single-file Windows .exe using SQLite."
+        "Also ships as an offline Windows desktop app (Electron + SQLite) with its own installer."
       ],
       "private": false,
       "featured": true,

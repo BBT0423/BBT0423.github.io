@@ -163,7 +163,7 @@
         "ตั้งงบ, อนุมัติรายการ, แจ้งเตือน, ออกรายงาน PDF / Excel และ import Excel เป็น background job พร้อมแถบความคืบหน้า",
         "Clean Architecture + CQRS (MediatR), login ด้วย JWT และ Google, 2FA (TOTP) และเก็บ audit log",
         "เทสต์ 44 ไฟล์ (xUnit, Moq, integration test) และ CI บน Bitbucket → SonarCloud → Azure",
-        "มีเวอร์ชันออฟไลน์เป็นไฟล์ .exe ไฟล์เดียวบน Windows ใช้ SQLite"
+        "มีเวอร์ชันแอป Desktop บน Windows (Electron) ใช้งานออฟไลน์ด้วย SQLite พร้อมตัวติดตั้ง"
       ],
       "private": false,
       "featured": true,
