@@ -468,7 +468,7 @@
       ],
       "private": false,
       "featured": true,
-      "links": []
+      "links": [{ "label": "GitHub", "url": "https://github.com/BBT0423/readmanga" }]
     }
   ],
   "learning": [
