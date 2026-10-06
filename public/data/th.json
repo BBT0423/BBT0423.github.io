@@ -1,0 +1,193 @@
+{
+  "profile": {
+    "name": "Pongpan Nerunchorn",
+    "nickname": "Boat",
+    "title": "Full-Stack Developer · .NET / Vue",
+    "summary": "Full-stack developer ประสบการณ์ 2 ปีกว่า ทำระบบ Cloud ERP ที่มีลูกค้าใช้งานจริง ด้วย Vue 3 + TypeScript และ .NET 8 Web API เคยดูแลโมดูลเองทั้งระบบ ตั้งแต่ logic การผลิตและคลังสินค้า จนถึงการ deploy ขึ้น Azure ชอบงานที่ต้องเอาเงื่อนไขทางธุรกิจที่ซับซ้อน มาทำให้เป็นระบบที่เสถียรและใช้ง่าย",
+    "location": "จันทบุรี",
+    "email": "pongpan22120@gmail.com",
+    "github": "github.com/BBT0423",
+    "photo": "",
+    "resumeUrl": "",
+    "emails": ["pongpan22120@gmail.com", "pongpan0423@gmail.com"],
+    "phone": "098-635-9292"
+  },
+  "stats": [
+    { "value": "2+ ปี", "label": "ประสบการณ์ทำงานประจำ", "sub": "+ ฝึกงาน 6 เดือน" },
+    { "value": "2,043", "label": "Commits ในระบบ ERP ที่ใช้งานจริง", "sub": "FE 1,378 · BE 665" },
+    { "value": "8", "label": "โมดูลที่ได้ทำ", "sub": "คลังสินค้า, การผลิต, บัญชี ฯลฯ" },
+    { "value": "3", "label": "แพลตฟอร์ม", "sub": "Web · Mobile · Handheld" }
+  ],
+  "experience": [
+    {
+      "company": "Innofinite Co., Ltd.",
+      "role": "System Programmer / Full-Stack Developer",
+      "period": "พ.ค. 2567 – มิ.ย. 2569",
+      "location": "กรุงเทพฯ",
+      "items": [
+        {
+          "name": "BizKit ERP",
+          "badge": "Private / โปรเจกต์บริษัท",
+          "stack": "Vue 3 · TypeScript · .NET 8 Web API · SQL Server · Azure",
+          "slug": "bizkit-erp",
+          "bullets": [
+            "ร่วมสร้างระบบใหม่ด้วย Vue 3 + TypeScript และ .NET 8 Web API แทนระบบเดิมที่เป็น Web Forms รวม 2,043 commits (frontend 1,378 / backend 665)",
+            "ดูแลโมดูลการผลิตทั้งหมดตั้งแต่หน้าจอถึง API ได้แก่ BOM และ yield, Work Center, ใบสั่งผลิต (MO) ทั้ง flow, รับสินค้าสำเร็จรูปทีละส่วน, การเบิกวัตถุดิบ, ต้นทุนเฉลี่ย และ Journal การผลิต",
+            "งานคลังสินค้า: Lot / Serial / FEFO, ต้นทุนเฉลี่ยต่อหน่วย, เช็คการแปลงหน่วยก่อนอนุมัติทุกเอกสาร และ import Excel สำหรับปรับสต็อกและ BOM",
+            "ทำระบบ session ที่ทำงานข้ามแท็บด้วย BroadcastChannel (จับเวลา AFK แค่แท็บเดียว, login / logout พร้อมกันทุกแท็บ, session guard) และเช็คสิทธิ์ที่ระดับ API พร้อม cache",
+            "ย้ายระบบขึ้น Azure: เก็บไฟล์และ template รายงานใน Blob Storage, ต่อ Azure SQL ด้วย Azure AD token พร้อม retry เมื่อเชื่อมต่อหลุดชั่วคราว และ deploy ขึ้น App Service",
+            "วาง global exception handling และ log กลางด้วย Serilog ฝั่ง backend",
+            "อัปเกรดรายงาน PDF จาก HiQPdf v9 เป็น HiQPdf.Next, ทำหัวรายงาน Excel ให้เป็นแบบเดียวกันกว่า 20 รายงาน, เปลี่ยนการส่งอีเมลจาก SendGrid เป็น SMTP และย้าย business logic ออกจาก controller ไปไว้ใน service layer",
+            "งานมือถือ: แอป Angular + Ionic, แอปเวอร์ชันใหม่ที่เขียนด้วย Vue 3 + Ionic + Capacitor และแอป Handheld (React Native) สำหรับสแกนบาร์โค้ดในคลัง"
+          ]
+        },
+        {
+          "name": "โปรเจกต์ลูกค้า — ระบบจัดการการผลิต",
+          "badge": "Private / โปรเจกต์บริษัท",
+          "stack": ".NET Framework Web API · Angular 9 · SQL Server",
+          "bullets": [
+            "ดูแลระบบการผลิตของโรงงานตีขึ้นรูปและตัดเหล็ก ซึ่งเป็นระบบแยกจาก ERP ทำควบคู่กับงานหลัก",
+            "ส่งมอบงาน Change Request (CR02): หน้าบันทึกผลการตีขึ้นรูปที่คำนวณจำนวนและน้ำหนักให้, ค้นหา Lot ในงานระหว่างผลิต (WIP) และเพิ่มข้อมูล heat bar ในรายงาน",
+            "ออกแบบป้าย WIP ใหม่ และเพิ่มการพิมพ์ขั้นตอนการผลิต (routing) ติดกล่องงานตีขึ้นรูปที่ส่งกลับ"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Innofinite Co., Ltd.",
+      "role": "Developer Intern",
+      "period": "6 เดือน",
+      "location": "กรุงเทพฯ",
+      "items": [
+        {
+          "name": "BizKit Invoice",
+          "stack": ".NET Framework 4.8 · Web Forms · Web API · SQL Server",
+          "bullets": [
+            "พัฒนาและซัพพอร์ตระบบ BizKit Invoice ที่ลูกค้าใช้งานจริง ได้ทำครบทุกขั้นตอน ตั้งแต่รับ requirement, พัฒนา, ทดสอบ จนถึงส่งมอบ",
+            "ได้รับเข้าทำงานประจำต่อทันทีหลังเรียนจบ"
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    { "date": "พ.ย. 2567", "text": "เริ่มจาก component แรก — footer, action menu, ฟอร์ม PO" },
+    { "date": "ธ.ค. 2567", "text": "หน้า PO / PR, ตารางรายการ และระบบพิมพ์เอกสาร" },
+    { "date": "ม.ค.–เม.ย. 2568", "text": "ทำโมดูลใหม่หลายตัว ช่วงที่เรียนรู้เร็วที่สุด (ฝั่ง frontend)" },
+    { "date": "พ.ค. 2568", "text": "เริ่มเขียน backend API — JWT, อีเมล, ข้อมูลบริษัท" },
+    { "date": "มิ.ย. 2568", "text": "ทำ backend เต็มตัว — สิทธิ์ผู้ใช้, สต็อก, รับสินค้า" },
+    { "date": "ต.ค. 2568", "text": "เริ่มโมดูลการผลิต — BOM, Work Center, ใบสั่งผลิต" },
+    { "date": "พ.ย. 2568", "text": "ปิดงวดบัญชี, Journal ปรับสต็อก, logic SO / ใบแจ้งหนี้" },
+    { "date": "ธ.ค. 2568", "text": "Hash รหัสผ่าน, งบดุล, cache สิทธิ์ที่ระดับ API" },
+    { "date": "ม.ค. 2569", "text": "รับสินค้าสำเร็จรูปทีละส่วน, ผลการผลิต, เงินมัดจำ, dashboard ยอดขาย" },
+    { "date": "ก.พ. 2569", "text": "Blob Storage, รายงานการผลิต, BOM yield, HiQPdf.Next" },
+    { "date": "มี.ค. 2569", "text": "flow ใบสั่งผลิตครบ, แก้ใบแจ้งหนี้ซื้อหลังอนุมัติ, packing list" },
+    { "date": "เม.ย. 2569", "text": "session ข้ามแท็บ, OAuth, คำนวณต้นทุนวัตถุดิบ" },
+    { "date": "พ.ค. 2569", "text": "Azure AD auth, เช็คการแปลงหน่วย, ย้ายไปใช้ SMTP" }
+  ],
+  "modules": [
+    { "name": "คลังสินค้า", "commits": 370 },
+    { "name": "การผลิต", "commits": 265 },
+    { "name": "ข้อมูลหลัก", "commits": 222 },
+    { "name": "การขาย", "commits": 193 },
+    { "name": "บัญชี", "commits": 128 },
+    { "name": "UI/UX", "commits": 113 },
+    { "name": "รายงาน", "commits": 98 },
+    { "name": "Auth / Security", "commits": 94 },
+    { "name": "จัดซื้อ", "commits": 75 },
+    { "name": "DevOps", "commits": 61 },
+    { "name": "Refactor", "commits": 31 }
+  ],
+  "skills": [
+    { "group": "Backend", "items": ["C#", ".NET 8 / 10 Web API", ".NET Framework 4.8 (Web API, MVC, Web Forms)", "SQL Server & Stored Procedure", "linq2db", "EF Core / EF6", "Clean Architecture", "CQRS (MediatR)", "FluentValidation", "AutoMapper / Mapster", "Serilog", "Quartz.NET"] },
+    { "group": "Frontend", "items": ["Vue 3 (Composition API)", "TypeScript", "Pinia", "Vue Router", "Angular", "PrimeVue", "Element Plus", "Tailwind CSS", "vue-i18n", "vee-validate / yup", "Chart.js / ECharts"] },
+    { "group": "Mobile", "items": ["Ionic + Capacitor (Vue / Angular)", "React Native", "สแกน Barcode / QR", "ล็อกอินด้วย Biometric", "Native module เครื่องสแกน Handheld (Java)"] },
+    { "group": "Cloud & DevOps", "items": ["Azure App Service", "Azure Blob Storage", "Azure AD auth (Azure SQL)", "Bitbucket Pipelines", "IIS", "SonarQube / SonarCloud"] },
+    { "group": "Security", "items": ["JWT + Refresh Token", "Google OAuth", "2FA (TOTP)", "Argon2", "Cache สิทธิ์ระดับ API", "Session ข้ามแท็บ"] },
+    { "group": "รายงาน & Integration", "items": ["HiQPdf.Next", "iText 7", "QuestPDF", "jsPDF", "EPPlus", "ClosedXML", "NPOI", "SMTP / SendGrid / FluentEmail", "Omise", "Firebase push", "Google Drive API"] },
+    { "group": "Testing", "items": ["xUnit", "Moq", "Integration test (ASP.NET Core)", "Vitest", "Cypress"] },
+    { "group": "เครื่องมือ & AI", "items": ["Git Flow", "Conventional Commits", "Jira", "Claude Code", "OpenCode", "CodeRabbit"] },
+    { "group": "ความรู้ด้าน ERP", "items": ["การผลิต (BOM, Work Center, MO, รับ FG ทีละส่วน)", "คลังสินค้า (Lot / Serial / FEFO, ต้นทุนเฉลี่ย, แปลงหน่วย)", "บัญชี (Journal, GL, งบดุล, ปิดงวด, อัตราแลกเปลี่ยน, มัดจำ)", "ขาย & จัดซื้อ (QO → SO → Picking → Shipping → Invoice, PR → PO, Back Order, CN / DN)"] }
+  ],
+  "projects": [
+    {
+      "slug": "bizkit-erp",
+      "name": "BizKit ERP",
+      "tagline": "ระบบ Cloud ERP (ไทย / อังกฤษ) ครอบคลุมงานขาย บัญชี คลังสินค้า และการผลิต",
+      "stack": ["Vue 3", "TypeScript", "PrimeVue", "Pinia", ".NET 8", "linq2db", "SQL Server", "Azure"],
+      "summary": "Cloud ERP ที่รองรับหลายบริษัทในระบบเดียว ผมเข้ามาช่วงที่ทีมกำลังเขียนระบบใหม่ จาก ASP.NET Web Forms เป็น Vue 3 SPA + .NET 8 Web API และได้ทำ 8 โมดูลทั้งฝั่ง frontend และ backend",
+      "bullets": [
+        "2,043 commits ใน 18 เดือน (frontend 1,378 / backend 665)",
+        "ดูแลโมดูลการผลิตทั้งหมด ตั้งแต่ BOM จนถึง Journal การผลิต",
+        "ออกแบบระบบ session ข้ามแท็บ และ cache สิทธิ์ที่ระดับ API",
+        "ย้ายไฟล์, template รายงาน และการเชื่อมต่อฐานข้อมูลขึ้น Azure (Blob Storage, Azure AD, App Service)"
+      ],
+      "private": true,
+      "featured": true,
+      "links": [],
+      "highlights": [
+        { "title": "การผลิต", "bullets": ["หน้า BOM (สูตรการผลิต) เลือก routing ได้ คำนวณ yield และสัดส่วนวัตถุดิบพร้อมปัดเศษให้ถูกต้อง", "ตั้งค่าขั้นตอนการผลิต (routing) และ Work Center พร้อมหน่วยเวลา", "ฟอร์มใบสั่งผลิต (MO) และหน้ารายละเอียด เปิด PR หรือ MO ย่อยต่อจาก MO ได้", "กดเริ่ม / จบการผลิตได้ทั้งแบบมีและไม่มี routing", "รับสินค้าสำเร็จรูปทีละส่วน, รายงานผลการผลิต และสร้าง Journal การผลิตใหม่ได้", "คิดต้นทุนวัตถุดิบที่เบิกไปผลิตด้วยต้นทุนเฉลี่ย รองรับการแปลงหน่วย"] },
+        { "title": "คลังสินค้า", "bullets": ["เอกสารปรับสต็อก, โอนย้าย, คืนสินค้า และตรวจนับ คิดต้นทุนถูกต้องตามหน่วยที่แปลง", "ติดตาม Lot และตัดสต็อกแบบ FEFO (ของใกล้หมดอายุออกก่อน) พร้อมเช็ควันหมดอายุ", "เช็คการแปลงหน่วย (UOM) ทุกครั้งก่อนอนุมัติเอกสาร", "รายงานสรุปความเคลื่อนไหวของสินค้า", "จัดการตำแหน่งเก็บ / ชั้นวางทีละหลายรายการ และ import Excel เพื่อปรับสต็อก"] },
+        { "title": "บัญชี", "bullets": ["ระบบปิดงวดบัญชี มีทั้งหน้าตั้งค่าและการเช็คใน API ทุกเอกสาร กันไม่ให้แก้เอกสารย้อนหลังในงวดที่ปิดแล้ว", "ตาราง Journal, เช็คความถูกต้อง และสร้าง Journal ใหม่จากเอกสารเดิมได้", "Service คำนวณงบดุล", "กฎการแก้ไขระดับผังบัญชี และบังคับระบุบัญชีเมื่อเป็นสินทรัพย์ถาวร"] },
+        { "title": "การขาย", "bullets": ["ย้าย logic ใบแจ้งหนี้จากระบบเดิมมาเขียนใหม่บน .NET 8", "ระบบเงินมัดจำที่ส่งต่อกันได้ตั้งแต่ใบเสนอราคา, SO, PO จนถึงใบแจ้งหนี้ขายและซื้อ", "เช็คความถูกต้องของใบลดหนี้ / เพิ่มหนี้ และทำ template เอกสาร", "พิมพ์ packing list และกราฟสรุปยอดขาย / อายุลูกหนี้"] },
+        { "title": "จัดซื้อ", "bullets": ["ฟอร์มใบขอซื้อ (PR) / ใบสั่งซื้อ (PO) และแปลง PO เป็นใบรับสินค้าได้", "ส่งอีเมลแจ้งเตือนเมื่อมีการส่ง อนุมัติ หรือไม่อนุมัติ PR / PO", "เปิด PR / PO อัตโนมัติจากวัตถุดิบที่ฝ่ายผลิตต้องใช้", "import รายชื่อผู้ขายพร้อมเช็คเลขผู้เสียภาษี และ export เป็น Excel"] },
+        { "title": "ข้อมูลหลัก", "bullets": ["import ข้อมูลสินค้าจาก Excel รวมถึงกลุ่มสินค้า", "เช็คข้อมูลสินค้าก่อนบันทึก และแสดง error ที่แท็บที่กรอกผิด", "จัดการสินค้าที่ถูกจองไว้แล้ว และรหัสสินค้าที่ลูกค้า / ผู้ขายใช้เรียก"] },
+        { "title": "Auth & Security", "bullets": ["แยก session ตามอุปกรณ์, router guard และ logout อัตโนมัติเมื่อไม่ได้ใช้งาน (AFK)", "เช็คสิทธิ์ที่ระดับ API พร้อม cache ไม่ต้อง query ทุกครั้ง", "Hash รหัสผ่าน, จำกัดจำนวน request (rate limiting) และ login ด้วย Google", "เชื่อมฐานข้อมูลด้วย Azure AD token แทน username / password"] },
+        { "title": "รายงาน & Infrastructure", "bullets": ["Report service บน HiQPdf.Next, หัวรายงาน Excel กว่า 20 รายงาน และ export CSV", "เก็บ template รายงานและไฟล์ import ไว้ใน Azure Blob Storage", "ระบบส่งอีเมลพร้อม log และย้ายไปใช้ SMTP", "แก้ปัญหาไฟล์ JS เก่าค้างหลัง deploy ใน Bitbucket Pipelines และทำ publish profile สำหรับ App Service"] }
+      ]
+    },
+    {
+      "slug": "create-clean-arch",
+      "name": "create-clean-arch",
+      "tagline": "CLI สร้างโปรเจกต์ .NET 10 แบบ Clean Architecture ในคำสั่งเดียว",
+      "stack": ["TypeScript", "Node.js", "Eta", "Vitest"],
+      "summary": "เครื่องมือ command-line ที่ผมทำให้ทีมใช้เริ่มโปรเจกต์ .NET ใหม่บนโครงสร้างเดียวกัน ได้ solution แบบ Clean Architecture ที่รันได้ทันที เลือกเพิ่ม frontend Vue 3 และ CI pipeline ได้",
+      "bullets": [
+        "สร้าง solution .NET 10 แบบ Clean Architecture เลือกเพิ่ม frontend Vue 3 และ CI ของ GitHub / Bitbucket ได้",
+        "โปรเจกต์ที่ได้มี JWT login, 2FA และรีเซ็ตรหัสผ่านมาให้พร้อมใช้",
+        "คำสั่ง `generate feature` เพิ่ม feature แบบ CQRS เข้าไปในโปรเจกต์ที่มีอยู่แล้ว",
+        "มี unit test และ end-to-end test ด้วย Vitest",
+        "ใช้กันภายในทีม ยังไม่เปิดโค้ดสาธารณะ"
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    },
+    {
+      "slug": "family-expense-tracker",
+      "name": "Family Expense Tracker",
+      "tagline": "เว็บแอปจัดการงบและรายจ่ายของครอบครัว",
+      "stack": [".NET 10", "EF Core", "Vue 3", "Element Plus", "Tailwind", "ECharts"],
+      "summary": "แอปจัดการงบประมาณในครอบครัว มีระบบอนุมัติรายการ แจ้งเตือน และรายงาน ทำขึ้นเพื่อฝึก Clean Architecture, CQRS และการเขียนเทสต์ให้ครบทั้งระบบ",
+      "bullets": [
+        "ตั้งงบ, อนุมัติรายการ, แจ้งเตือน, ออกรายงาน PDF / Excel และ import Excel เป็น background job พร้อมแถบความคืบหน้า",
+        "Clean Architecture + CQRS (MediatR), login ด้วย JWT และ Google, 2FA (TOTP) และเก็บ audit log",
+        "เทสต์ 44 ไฟล์ (xUnit, Moq, integration test) และ CI บน Bitbucket → SonarCloud → Azure",
+        "มีเวอร์ชันออฟไลน์เป็นไฟล์ .exe ไฟล์เดียวบน Windows ใช้ SQLite"
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    },
+    {
+      "slug": "readmanga",
+      "name": "ReadManga",
+      "tagline": "แอปอ่านมังงะ — เว็บ + แอป Android แบบออฟไลน์",
+      "stack": [".NET 10", "Vue 3", "Google Drive API", "Ionic", "Capacitor"],
+      "summary": "เว็บอ่านมังงะพร้อมหลังบ้านสำหรับแอดมิน และแอป Android ที่อ่านได้แม้ไม่มีเน็ต",
+      "bullets": [
+        "คลังเรื่อง, ค้นหา, แยกหมวด, รายการโปรด, จำตอนที่อ่านค้าง และคอมเมนต์พร้อมโหวต",
+        "หลังบ้านสำหรับอัปโหลด โดยดึงรูปมังงะจาก Google Drive",
+        "แอป Android ออฟไลน์ (Ionic + Capacitor) จำตอนที่อ่านและการตั้งค่าไว้ในเครื่อง"
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    }
+  ],
+  "learning": ["Godot 4 (GDScript)"],
+  "education": {
+    "degree": "วิทยาศาสตรบัณฑิต สาขาวิทยาการคอมพิวเตอร์",
+    "school": "มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา"
+  }
+}

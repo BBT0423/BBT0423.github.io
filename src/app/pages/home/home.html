@@ -1,0 +1,188 @@
+@if (content.content(); as c) {
+  <!-- Hero -->
+  <section class="hero">
+    <app-hero-bg />
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hello-pill mono"><span class="dot"></span>{{ 'hero.hi' | t }}</div>
+        <h1 class="hero-name">{{ c.profile.name }}</h1>
+        <div class="hero-role mono">
+          <span>Full-Stack Developer</span>
+          <span class="muted">/</span>
+          <span class="brand-text"><app-typer [words]="typeWords" /></span>
+        </div>
+        <p class="hero-summary">{{ c.profile.summary }}</p>
+        <div class="hero-actions">
+          <a class="btn primary" routerLink="/" fragment="projects">{{ 'hero.viewProjects' | t }}</a>
+          <a class="btn outline" routerLink="/" fragment="contact">{{ 'hero.contactMe' | t }}</a>
+          @if (c.profile.resumeUrl) {
+            <a class="btn outline" [href]="c.profile.resumeUrl" download>{{ 'hero.resume' | t }}</a>
+          }
+          <a class="btn ghost" [href]="'https://' + c.profile.github" target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"></path>
+            </svg>
+            GitHub
+          </a>
+        </div>
+        <div class="hero-meta mono">
+          <span>{{ c.profile.location }}</span>
+          <span>{{ c.profile.email }}</span>
+        </div>
+      </div>
+      @if (c.profile.photo) {
+        <img class="hero-photo" [src]="c.profile.photo" [alt]="c.profile.name" />
+      }
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="container stats">
+    @for (s of c.stats; track s.label) {
+      <app-stat-card appReveal [stat]="s" />
+    }
+  </section>
+
+  <!-- 01 Experience -->
+  <section id="experience" class="container section">
+    <div class="section-head" appReveal>
+      <div class="eyebrow mono">01 — {{ 'nav.experience' | t }}</div>
+      <h2>{{ 'exp.title' | t }}</h2>
+    </div>
+    <div class="jobs">
+      @for (job of c.experience; track job.role) {
+        <div class="job" appReveal>
+          <div class="job-side">
+            <div class="mono job-period">{{ job.period }}</div>
+            <div class="muted small">{{ job.location }}</div>
+          </div>
+          <div class="job-main">
+            <h3 class="job-role">{{ job.role }}</h3>
+            <div class="job-company">{{ job.company }}</div>
+            <div class="job-items">
+              @for (item of job.items; track item.name) {
+                <div class="card exp-card">
+                  <div class="exp-head">
+                    <span class="exp-name">{{ item.name }}</span>
+                    @if (item.badge) {
+                      <span class="badge mono">{{ item.badge }}</span>
+                    }
+                  </div>
+                  @if (item.stack) {
+                    <div class="mono muted small exp-stack">{{ item.stack }}</div>
+                  }
+                  <ul class="bullets">
+                    @for (b of item.bullets; track $index) {
+                      <li>{{ b }}</li>
+                    }
+                  </ul>
+                  @if (item.slug) {
+                    <a class="view-link mono" [routerLink]="['/projects', item.slug]">{{ 'label.viewDetails' | t }} →</a>
+                  }
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- 02 Growth -->
+  <section id="growth" class="container section">
+    <div class="section-head" appReveal>
+      <div class="eyebrow mono">02 — {{ 'nav.growth' | t }}</div>
+      <h2>{{ 'growth.title' | t }}</h2>
+    </div>
+    <div class="growth-grid">
+      <div class="card panel" appReveal>
+        <div class="row-between">
+          <h3 class="card-title">{{ 'growth.milestones' | t }}</h3>
+          <span class="mono muted small">{{ 'growth.range' | t }}</span>
+        </div>
+        <app-timeline [entries]="c.timeline" />
+      </div>
+      <div class="card panel" appReveal>
+        <h3 class="card-title">{{ 'growth.chartTitle' | t }}</h3>
+        <p class="muted small">{{ 'growth.chartSub' | t }}</p>
+        <app-bar-chart [data]="c.modules" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Skills -->
+  <section id="skills" class="container section">
+    <div class="section-head" appReveal>
+      <div class="eyebrow mono">03 — {{ 'nav.skills' | t }}</div>
+      <h2>{{ 'skills.title' | t }}</h2>
+    </div>
+    <div class="skills-grid">
+      @for (g of c.skills; track g.group) {
+        <app-skill-group appReveal [group]="g" />
+      }
+    </div>
+  </section>
+
+  <!-- 04 Projects -->
+  <section id="projects" class="container section">
+    <div class="section-head" appReveal>
+      <div class="eyebrow mono">04 — {{ 'nav.projects' | t }}</div>
+      <h2>{{ 'projects.title' | t }}</h2>
+    </div>
+    <div class="projects-grid">
+      @for (p of c.projects; track p.slug; let i = $index) {
+        <app-project-card appReveal [project]="p" [index]="i" />
+      }
+    </div>
+  </section>
+
+  <!-- 05 Education -->
+  <section id="education" class="container section">
+    <div class="section-head" appReveal>
+      <div class="eyebrow mono">05 — {{ 'education' | t }}</div>
+    </div>
+    <div class="edu-grid">
+      <div class="card panel" appReveal>
+        <div class="mono muted small strong">{{ 'education' | t }}</div>
+        <div class="edu-big">{{ c.education.degree }}</div>
+        <div class="muted">{{ c.education.school }}</div>
+      </div>
+      <div class="card panel" appReveal>
+        <div class="mono muted small strong">{{ 'learning' | t }}</div>
+        @for (l of c.learning; track l) {
+          <div class="edu-big">{{ l }}</div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Contact -->
+  <section id="contact" class="container section last">
+    <div class="contact-card" appReveal>
+      <div>
+        <div class="eyebrow mono">06 — {{ 'nav.contact' | t }}</div>
+        <h2>{{ 'contact.title' | t }}</h2>
+        <p class="muted contact-sub">{{ 'contact.sub' | t }}</p>
+        <dl class="contact-list">
+          <dt class="mono">Email</dt>
+          <dd>
+            @for (em of c.profile.emails ?? [c.profile.email]; track em) {
+              <a [href]="'mailto:' + em">{{ em }}</a>
+            }
+          </dd>
+          @if (c.profile.phone) {
+            <dt class="mono">{{ 'contact.phone' | t }}</dt>
+            <dd><a [href]="tel(c.profile.phone)">{{ c.profile.phone }}</a></dd>
+          }
+          <dt class="mono">GitHub</dt>
+          <dd><a [href]="'https://' + c.profile.github" target="_blank" rel="noopener">{{ c.profile.github }}</a></dd>
+          <dt class="mono">{{ 'contact.location' | t }}</dt>
+          <dd>{{ c.profile.location }}</dd>
+        </dl>
+      </div>
+      <app-contact-form [to]="c.profile.email" />
+    </div>
+  </section>
+} @else {
+  <div class="container loading mono">Loading…</div>
+}

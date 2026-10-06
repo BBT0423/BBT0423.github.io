@@ -1,0 +1,481 @@
+{
+  "profile": {
+    "name": "Pongpan Nerunchorn",
+    "nickname": "Boat",
+    "title": "Full-Stack Developer · .NET / Vue",
+    "summary": "Full-stack developer with 2+ years building a production cloud ERP with Vue 3 + TypeScript and .NET 8 Web API. I've owned modules end to end — from manufacturing and inventory logic to Azure deployment — and I enjoy turning complex business rules into reliable, easy-to-use software.",
+    "location": "Chanthaburi, Thailand",
+    "email": "pongpan22120@gmail.com",
+    "github": "github.com/BBT0423",
+    "photo": "",
+    "resumeUrl": "",
+    "emails": [
+      "pongpan22120@gmail.com",
+      "pongpan0423@gmail.com"
+    ],
+    "phone": "098-635-9292"
+  },
+  "stats": [
+    {
+      "value": "2+ yrs",
+      "label": "Full-time experience",
+      "sub": "+ 6-month internship"
+    },
+    {
+      "value": "2,043",
+      "label": "Commits on a production ERP",
+      "sub": "FE 1,378 · BE 665"
+    },
+    {
+      "value": "8",
+      "label": "ERP modules",
+      "sub": "Inventory → Auth"
+    },
+    {
+      "value": "3",
+      "label": "Platforms",
+      "sub": "Web · Mobile · Handheld"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Innofinite Co., Ltd.",
+      "role": "System Programmer / Full-Stack Developer",
+      "period": "May 2024 – Jun 2026",
+      "location": "Bangkok",
+      "items": [
+        {
+          "name": "BizKit ERP",
+          "badge": "Private / Company project",
+          "stack": "Vue 3 · TypeScript · .NET 8 Web API · SQL Server · Azure",
+          "slug": "bizkit-erp",
+          "bullets": [
+            "Built the new Vue 3 + TypeScript SPA and .NET 8 Web API that replaced the legacy Web Forms system — 2,043 commits (1,378 frontend, 665 backend).",
+            "Manufacturing module from UI to API: BOM and yield, Work Center, the full Manufacturing Order flow, partial finished goods, material consumption, average costing and production journals.",
+            "Inventory: Lot/Serial/FEFO, average unit cost, UOM-conversion validation across all approval flows, Excel import for stock adjustment and BOM.",
+            "Multi-tab session handling with BroadcastChannel (leader-only AFK timer, cross-tab login/logout sync, session guards) and API-level permission checks with caching.",
+            "Azure: Blob Storage for files and report templates, Azure AD token auth for Azure SQL with transient-error retry, App Service deployment.",
+            "Centralized global exception handling and logging with Serilog in the .NET backend.",
+            "Migrated PDF reports from HiQPdf v9 to HiQPdf.Next, standardized headers on 20+ Excel reports, moved email from SendGrid to SMTP, and refactored business logic from controllers into a service layer.",
+            "Mobile: worked on the Angular + Ionic app, its Vue 3 + Ionic + Capacitor rewrite, and a React Native handheld app for warehouse barcode scanning."
+          ]
+        },
+        {
+          "name": "Client project — Production management system",
+          "badge": "Private / Company project",
+          "stack": ".NET Framework Web API · Angular 9 · SQL Server",
+          "bullets": [
+            "Supported a separate production system for a forging & cutting manufacturer alongside ERP work.",
+            "Delivered change request CR02: forging result entry with quantity/weight calculation, WIP lot search, and heat-bar fields on reports.",
+            "Redesigned the WIP tag and added routing-process printing on forging return boxes."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Innofinite Co., Ltd.",
+      "role": "Developer Intern",
+      "period": "6 months",
+      "location": "Bangkok",
+      "items": [
+        {
+          "name": "BizKit Invoice",
+          "bullets": [
+            "Developed and supported the production BizKit Invoice system (.NET Framework 4.8, Web Forms, Web API, SQL Server) across the full SDLC.",
+            "Joined full-time right after graduation."
+          ],
+          "stack": ".NET Framework 4.8 · Web Forms · Web API · SQL Server"
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "Nov 2024",
+      "text": "First components — footer, action menu, PO form"
+    },
+    {
+      "date": "Dec 2024",
+      "text": "PO and PR pages, table list, print component"
+    },
+    {
+      "date": "Jan–Apr 2025",
+      "text": "New modules, fast learning curve (frontend)"
+    },
+    {
+      "date": "May 2025",
+      "text": "Started the backend API — JWT, email, company profile"
+    },
+    {
+      "date": "Jun 2025",
+      "text": "Full backend work — permissions, stock, item receipt"
+    },
+    {
+      "date": "Oct 2025",
+      "text": "Manufacturing module — BOM, Work Center, MO"
+    },
+    {
+      "date": "Nov 2025",
+      "text": "Lock period, stock-adjust journal, SO/invoice logic"
+    },
+    {
+      "date": "Dec 2025",
+      "text": "Password hashing, balance sheet, API permission cache"
+    },
+    {
+      "date": "Jan 2026",
+      "text": "Partial FG, production result, deposit flow, sales dashboard"
+    },
+    {
+      "date": "Feb 2026",
+      "text": "Blob storage, production report, BOM yield, HiQPdf.Next"
+    },
+    {
+      "date": "Mar 2026",
+      "text": "MO flow complete, purchase invoice edit, packing list"
+    },
+    {
+      "date": "Apr 2026",
+      "text": "Multi-tab session, OAuth, material cost calculation"
+    },
+    {
+      "date": "May 2026",
+      "text": "Azure AD auth, unit-conversion validation, SMTP migration"
+    }
+  ],
+  "modules": [
+    {
+      "name": "Inventory",
+      "commits": 370
+    },
+    {
+      "name": "Manufacturing",
+      "commits": 265
+    },
+    {
+      "name": "Master Data",
+      "commits": 222
+    },
+    {
+      "name": "Sales",
+      "commits": 193
+    },
+    {
+      "name": "Accounting",
+      "commits": 128
+    },
+    {
+      "name": "UI/UX",
+      "commits": 113
+    },
+    {
+      "name": "Reports",
+      "commits": 98
+    },
+    {
+      "name": "Auth & Security",
+      "commits": 94
+    },
+    {
+      "name": "Purchase",
+      "commits": 75
+    },
+    {
+      "name": "DevOps",
+      "commits": 61
+    },
+    {
+      "name": "Refactor",
+      "commits": 31
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend",
+      "items": [
+        "C#",
+        ".NET 8 / 10 Web API",
+        ".NET Framework 4.8 (Web API, MVC, Web Forms)",
+        "SQL Server & stored procedures",
+        "linq2db",
+        "EF Core / EF6",
+        "Clean Architecture",
+        "CQRS (MediatR)",
+        "FluentValidation",
+        "AutoMapper / Mapster",
+        "Serilog",
+        "Quartz.NET"
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        "Vue 3 (Composition API)",
+        "TypeScript",
+        "Pinia",
+        "Vue Router",
+        "Angular",
+        "PrimeVue",
+        "Element Plus",
+        "Tailwind CSS",
+        "vue-i18n",
+        "vee-validate / yup",
+        "Chart.js / ECharts"
+      ]
+    },
+    {
+      "group": "Mobile",
+      "items": [
+        "Ionic + Capacitor (Vue & Angular)",
+        "React Native",
+        "Barcode / QR",
+        "Biometric login",
+        "Native handheld-scanner module (Java)"
+      ]
+    },
+    {
+      "group": "Cloud & DevOps",
+      "items": [
+        "Azure App Service",
+        "Azure Blob Storage",
+        "Azure AD auth (Azure SQL)",
+        "Bitbucket Pipelines",
+        "IIS",
+        "SonarQube / SonarCloud"
+      ]
+    },
+    {
+      "group": "Security",
+      "items": [
+        "JWT + refresh token",
+        "Google OAuth",
+        "2FA (TOTP)",
+        "Argon2",
+        "API permission caching",
+        "Cross-tab session sync"
+      ]
+    },
+    {
+      "group": "Reporting & Integrations",
+      "items": [
+        "HiQPdf.Next",
+        "iText 7",
+        "QuestPDF",
+        "jsPDF",
+        "EPPlus",
+        "ClosedXML",
+        "NPOI",
+        "SMTP / SendGrid / FluentEmail",
+        "Omise",
+        "Firebase push",
+        "Google Drive API"
+      ]
+    },
+    {
+      "group": "Testing",
+      "items": [
+        "xUnit",
+        "Moq",
+        "ASP.NET Core integration tests",
+        "Vitest",
+        "Cypress"
+      ]
+    },
+    {
+      "group": "Tools & AI",
+      "items": [
+        "Git Flow",
+        "Conventional Commits",
+        "Jira",
+        "Claude Code",
+        "OpenCode",
+        "CodeRabbit"
+      ]
+    },
+    {
+      "group": "ERP Domain",
+      "items": [
+        "Manufacturing (BOM, Work Center, MO, partial FG)",
+        "Inventory (Lot/Serial/FEFO, avg cost, UOM)",
+        "Accounting (Journal, GL, Balance Sheet, period lock, FX, deposit)",
+        "Sales & Purchase (QO → SO → Picking → Shipping → Invoice, PR → PO, back order, CN/DN)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "bizkit-erp",
+      "name": "BizKit ERP",
+      "tagline": "Cloud ERP (TH/EN) for invoicing, accounting, inventory and manufacturing",
+      "stack": [
+        "Vue 3",
+        "TypeScript",
+        "PrimeVue",
+        "Pinia",
+        ".NET 8",
+        "linq2db",
+        "SQL Server",
+        "Azure"
+      ],
+      "summary": "A multi-company cloud ERP. I worked across the rewrite from legacy ASP.NET Web Forms to a Vue 3 SPA with a .NET 8 Web API, touching 8 modules on both frontend and backend.",
+      "bullets": [
+        "2,043 commits over 18 months (1,378 frontend, 665 backend).",
+        "Owned the Manufacturing module end to end, from BOM to production journals.",
+        "Designed cross-tab session handling and API-level permission caching.",
+        "Moved files, templates and database auth onto Azure (Blob Storage, Azure AD, App Service)."
+      ],
+      "private": true,
+      "featured": true,
+      "links": [],
+      "highlights": [
+        {
+          "title": "Manufacturing",
+          "bullets": [
+            "BOM module with routing selection and yield / ratio rounding",
+            "Routing and Work Center setup with time units",
+            "Manufacturing Order form and detail; generate PR or sub-MO from an MO",
+            "Start / finish production with or without routing",
+            "Partial finished goods, production result report, re-create production journal",
+            "Material consumption at average cost with UOM conversion"
+          ]
+        },
+        {
+          "title": "Inventory",
+          "bullets": [
+            "Stock adjust, transfer, return and stock taking with unit cost by conversion",
+            "Lot / FEFO tracking with expiry-date validation",
+            "Unit-conversion validation across every approval flow",
+            "Inventory movement summary report",
+            "Batch location / shelf support and Excel import for stock adjustment"
+          ]
+        },
+        {
+          "title": "Accounting",
+          "bullets": [
+            "Lock period — UI page plus checks on every document API",
+            "Journal table, journal validation and re-create journal",
+            "Balance sheet service",
+            "Account-code level rules and fixed-asset account requirements"
+          ]
+        },
+        {
+          "title": "Sales",
+          "bullets": [
+            "Invoice service ported from the legacy logic to .NET 8",
+            "Deposit flow across QO, SO, PO, invoice and purchase invoice",
+            "Credit / debit note validation and document templates",
+            "Packing list printing; sales summary and aging charts"
+          ]
+        },
+        {
+          "title": "Purchase",
+          "bullets": [
+            "PR / PO forms, convert PO to item receipt",
+            "Email notifications on PR / PO submit, approve and reject",
+            "Generate PR / PO from manufacturing demand",
+            "Vendor import with tax-ID validation; Excel export"
+          ]
+        },
+        {
+          "title": "Master Data",
+          "bullets": [
+            "Item import from Excel, including item groups",
+            "Item maintenance validation with per-tab error indicators",
+            "Allocated items, customer / supplier item codes"
+          ]
+        },
+        {
+          "title": "Auth & Security",
+          "bullets": [
+            "Session ID per device, router guards and AFK handling",
+            "API-level permission checks with caching",
+            "Password hashing, rate limiting, Google OAuth redirect flow",
+            "Azure AD token auth for the database"
+          ]
+        },
+        {
+          "title": "Reports & Infrastructure",
+          "bullets": [
+            "Report service on HiQPdf.Next; headers on 20+ Excel exports; CSV export",
+            "Report and import templates in Azure Blob Storage",
+            "Email subsystem with logging and SMTP migration",
+            "Bitbucket Pipelines fix for stale chunks after deploy; App Service publish profiles"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "create-clean-arch",
+      "name": "create-clean-arch",
+      "tagline": "CLI that scaffolds .NET 10 Clean Architecture solutions",
+      "stack": [
+        "TypeScript",
+        "Node.js",
+        "Eta",
+        "Vitest"
+      ],
+      "summary": "A command-line generator I built so my team can start new .NET projects from a consistent, ready-made structure. It produces a ready-to-run Clean Architecture solution with an optional Vue 3 frontend and CI pipeline.",
+      "bullets": [
+        "Generates a .NET 10 Clean Architecture solution with optional Vue 3 frontend and GitHub / Bitbucket CI.",
+        "Generated projects come with JWT login, 2FA and password reset.",
+        "`generate feature` adds a new CQRS feature slice to an existing project.",
+        "Covered by Vitest unit and end-to-end tests.",
+        "Used internally by a team; source not public."
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    },
+    {
+      "slug": "family-expense-tracker",
+      "name": "Family Expense Tracker",
+      "tagline": "Full-stack budget and expense app for families",
+      "stack": [
+        ".NET 10",
+        "EF Core",
+        "Vue 3",
+        "Element Plus",
+        "Tailwind",
+        "ECharts"
+      ],
+      "summary": "A family budgeting app with approvals, notifications and reports — built to practise Clean Architecture, CQRS and testing end to end.",
+      "bullets": [
+        "Budgets, transaction approvals, notifications, PDF / Excel reports, and Excel import as a background job with progress tracking.",
+        "Clean Architecture + CQRS (MediatR), JWT + Google login, 2FA (TOTP) and audit log.",
+        "44 test files (xUnit, Moq, integration tests); Bitbucket CI → SonarCloud → Azure.",
+        "Also ships as an offline single-file Windows .exe using SQLite."
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    },
+    {
+      "slug": "readmanga",
+      "name": "ReadManga",
+      "tagline": "Manga reader — web app + offline Android app",
+      "stack": [
+        ".NET 10",
+        "Vue 3",
+        "Google Drive API",
+        "Ionic",
+        "Capacitor"
+      ],
+      "summary": "A manga reading platform with an admin panel, plus a companion Android app that works fully offline.",
+      "bullets": [
+        "Library, search, genres, favorites, reading progress and comments with voting.",
+        "Admin upload panel; comic images served from Google Drive.",
+        "Offline Android app (Ionic + Capacitor) that saves progress and reader preferences on the device."
+      ],
+      "private": false,
+      "featured": true,
+      "links": []
+    }
+  ],
+  "learning": [
+    "Godot 4 (GDScript)"
+  ],
+  "education": {
+    "degree": "B.Sc. Computer Science",
+    "school": "Kasetsart University, Sriracha Campus"
+  }
+}

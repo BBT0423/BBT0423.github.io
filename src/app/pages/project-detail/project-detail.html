@@ -1,0 +1,82 @@
+<div class="container detail">
+  <a class="back-link mono" routerLink="/" fragment="projects">← {{ 'label.back' | t }}</a>
+
+  @if (project(); as p) {
+    <div class="detail-cover" [style.background]="cover()">
+      <span class="cover-pill mono">{{ (p.private ? 'label.private' : 'label.personal') | t }}</span>
+      <h1>{{ p.name }}</h1>
+      <p class="detail-tagline">{{ p.tagline }}</p>
+      <div class="cover-chips">
+        @for (s of p.stack; track s) {
+          <span class="cover-chip mono">{{ s }}</span>
+        }
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-main" appReveal>
+        <div class="eyebrow mono">{{ 'label.overview' | t }}</div>
+        <p class="detail-summary">{{ p.summary }}</p>
+        <div class="eyebrow mono spaced">{{ 'label.whatIDid' | t }}</div>
+        <ul class="bullets large">
+          @for (b of p.bullets; track $index) {
+            <li>{{ b }}</li>
+          }
+        </ul>
+      </div>
+      <aside class="card detail-aside" appReveal>
+        <div>
+          <div class="mono muted small">{{ 'label.type' | t }}</div>
+          <div class="aside-value">{{ (p.private ? 'label.private' : 'label.personal') | t }}</div>
+        </div>
+        <div>
+          <div class="mono muted small">{{ 'label.stack' | t }}</div>
+          <div class="mini-chips">
+            @for (s of p.stack; track s) {
+              <span class="mini-chip mono">{{ s }}</span>
+            }
+          </div>
+        </div>
+        @for (l of p.links; track l.url) {
+          <a class="btn outline" [href]="l.url" target="_blank" rel="noopener">{{ l.label }}</a>
+        }
+        @if (p.private) {
+          <div class="private-note">{{ 'label.privateNote' | t }}</div>
+        }
+      </aside>
+    </div>
+
+    @if (p.highlights?.length) {
+      <div class="highlights">
+        <div class="eyebrow mono" appReveal>{{ 'label.highlights' | t }}</div>
+        <div class="skills-grid">
+          @for (h of p.highlights; track h.title; let i = $index) {
+            <div class="card lift" appReveal>
+              <div class="hl-head">
+                <span class="mono hl-idx">{{ pad2(i + 1) }}</span>
+                <h3 class="card-title">{{ h.title }}</h3>
+              </div>
+              <ul class="bullets">
+                @for (b of h.bullets; track $index) {
+                  <li>{{ b }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    @if (next(); as n) {
+      <a class="next-card" [routerLink]="['/projects', n.slug]" appReveal>
+        <span>
+          <span class="mono muted small block">{{ 'label.nextProject' | t }}</span>
+          <span class="next-name">{{ n.name }}</span>
+        </span>
+        <span class="next-arrow">→</span>
+      </a>
+    }
+  } @else if (content.content()) {
+    <p class="loading">{{ 'label.notFound' | t }}</p>
+  }
+</div>
