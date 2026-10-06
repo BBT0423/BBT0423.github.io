@@ -20,24 +20,24 @@ describe('I18nService', () => {
 
   it('defaults to English and loads the English dictionary', () => {
     TestBed.tick();
-    http.expectOne('i18n/en.json').flush({ 'nav.projects': 'Projects' });
+    http.expectOne((r) => r.url === 'i18n/en.json').flush({ 'nav.projects': 'Projects' });
     expect(service.lang()).toBe('en');
     expect(service.t('nav.projects')).toBe('Projects');
   });
 
   it('falls back to the key when a translation is missing', () => {
     TestBed.tick();
-    http.expectOne('i18n/en.json').flush({});
+    http.expectOne((r) => r.url === 'i18n/en.json').flush({});
     expect(service.t('missing.key')).toBe('missing.key');
   });
 
   it('switches to Thai, reloads the dictionary and persists the choice', () => {
     TestBed.tick();
-    http.expectOne('i18n/en.json').flush({ 'nav.projects': 'Projects' });
+    http.expectOne((r) => r.url === 'i18n/en.json').flush({ 'nav.projects': 'Projects' });
 
     service.toggle();
     TestBed.tick();
-    http.expectOne('i18n/th.json').flush({ 'nav.projects': 'โปรเจกต์' });
+    http.expectOne((r) => r.url === 'i18n/th.json').flush({ 'nav.projects': 'โปรเจกต์' });
 
     expect(service.lang()).toBe('th');
     expect(service.t('nav.projects')).toBe('โปรเจกต์');

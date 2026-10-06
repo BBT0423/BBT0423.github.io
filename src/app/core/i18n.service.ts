@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of, switchMap } from 'rxjs';
 import { Lang } from './models';
+import { CACHE_BUST } from './cache-bust';
 
 const STORAGE_KEY = 'portfolio.lang';
 
@@ -26,7 +27,7 @@ export class I18nService {
     toObservable(this.lang).pipe(
       switchMap((lang) =>
         this.http
-          .get<Record<string, string>>(`i18n/${lang}.json`)
+          .get<Record<string, string>>(`i18n/${lang}.json`, { params: CACHE_BUST })
           .pipe(catchError(() => of({} as Record<string, string>))),
       ),
     ),

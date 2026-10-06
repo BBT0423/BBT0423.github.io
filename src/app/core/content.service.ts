@@ -4,6 +4,7 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of, switchMap } from 'rxjs';
 import { I18nService } from './i18n.service';
 import { PortfolioContent, Project } from './models';
+import { CACHE_BUST } from './cache-bust';
 
 @Injectable({ providedIn: 'root' })
 export class ContentService {
@@ -15,7 +16,7 @@ export class ContentService {
     toObservable(this.i18n.lang).pipe(
       switchMap((lang) =>
         this.http
-          .get<PortfolioContent>(`data/${lang}.json`)
+          .get<PortfolioContent>(`data/${lang}.json`, { params: CACHE_BUST })
           .pipe(catchError(() => of(null))),
       ),
     ),

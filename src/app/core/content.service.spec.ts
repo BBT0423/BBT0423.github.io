@@ -45,8 +45,8 @@ describe('ContentService', () => {
 
   it('loads content for the current language and derives featured projects', () => {
     TestBed.tick();
-    http.match('i18n/en.json').forEach((r) => r.flush({}));
-    http.expectOne('data/en.json').flush(fixture);
+    http.match((r) => r.url === 'i18n/en.json').forEach((r) => r.flush({}));
+    http.expectOne((r) => r.url === 'data/en.json').flush(fixture);
 
     expect(service.featuredProjects().map((p) => p.slug)).toEqual(['a']);
     expect(service.maxModuleCommits()).toBe(370);
@@ -56,8 +56,8 @@ describe('ContentService', () => {
 
   it('stays null when the request fails', () => {
     TestBed.tick();
-    http.match('i18n/en.json').forEach((r) => r.flush({}));
-    http.expectOne('data/en.json').flush('boom', { status: 500, statusText: 'Server Error' });
+    http.match((r) => r.url === 'i18n/en.json').forEach((r) => r.flush({}));
+    http.expectOne((r) => r.url === 'data/en.json').flush('boom', { status: 500, statusText: 'Server Error' });
     expect(service.content()).toBeNull();
   });
 });
